@@ -1,0 +1,33 @@
+{
+  "name": "t-ens",
+  "version": "0.0.1",
+  "description": "Terminal ENS",
+  "bin": {
+    "t-ens": "./dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "link-cli": "(npm unlink t-ens || true) && chmod +x ./dist/index.js && npm link .",
+    "dev": "tsx ./src/index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ensdomains/ensjs": "^3.4.4",
+    "chalk": "^5.3.0",
+    "clear": "^0.1.0",
+    "commander": "^12.0.0",
+    "figlet": "^1.7.0",
+    "typescript": "^5.3.3",
+    "viem": "^1.21.4"
+  },
+  "devDependencies": {
+    "@types/clear": "^0.1.4",
+    "@types/figlet": "^1.5.8",
+    "@types/node": "^20.11.23",
+    "tsx": "^4.7.1"
+  }
+}
