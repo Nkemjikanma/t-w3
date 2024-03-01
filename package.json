@@ -15,8 +15,8 @@
   "keywords": ["cli", "ens", "ethereum", "terminal"],
   "author": "Nkemjikanma",
   "license": "ISC",
-  "repository": "https://github.com/nkemjikanma/directory_manager",
-  "homepage": "https://github.com/nkemjikanma/directory_manager#readme",
+  "repository": "https://github.com/nkemjikanma/t-ens",
+  "homepage": "https://github.com/nkemjikanma/t-ens#readme",
   "dependencies": {
     "@ensdomains/ensjs": "^3.4.4",
     "chalk": "^5.3.0",
