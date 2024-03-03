@@ -1,6 +1,6 @@
 {
   "name": "@nkemjikanma/t-ens",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Terminal ENS",
   "bin": {
     "t-ens": "./dist/index.js"
@@ -17,6 +17,11 @@
   "license": "ISC",
   "repository": "https://github.com/nkemjikanma/t-ens",
   "homepage": "https://github.com/nkemjikanma/t-ens#readme",
+  "source": "https://github.com/nkemjikanma/t-ens",
+  "project_url": {
+    "homepage": "https://github.com/nkemjikanma/t-ens#readme",
+    "source": "https://github.com/nkemjikanma/t-ens"
+  },
   "dependencies": {
     "@ensdomains/ensjs": "^3.4.4",
     "chalk": "^5.3.0",
