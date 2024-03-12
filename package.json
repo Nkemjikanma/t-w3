@@ -12,7 +12,12 @@
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["cli", "ens", "ethereum", "terminal"],
+  "keywords": [
+    "cli",
+    "ens",
+    "ethereum",
+    "terminal"
+  ],
   "author": "Nkemjikanma",
   "license": "ISC",
   "repository": "https://github.com/nkemjikanma/t-ens",
@@ -32,9 +37,12 @@
     "viem": "^1.21.4"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/clear": "^0.1.4",
     "@types/figlet": "^1.5.8",
     "@types/node": "^20.11.23",
+    "semantic-release": "^23.0.2",
     "tsx": "^4.7.1"
   }
 }
