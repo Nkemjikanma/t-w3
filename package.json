@@ -1,6 +1,6 @@
 {
   "name": "@nkemjikanma/t-ens",
-  "version": "0.0.4",
+  "version": "0.0.0-development",
   "description": "Terminal ENS",
   "bin": {
     "t-ens": "./dist/index.js"
@@ -11,17 +11,16 @@
     "dev": "tsx ./src/index.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "prepare": "husky",
+    "semantic-release": "semantic-release --branches main"
   },
-  "keywords": [
-    "cli",
-    "ens",
-    "ethereum",
-    "terminal"
-  ],
+  "keywords": ["cli", "ens", "ethereum", "terminal"],
   "author": "Nkemjikanma",
   "license": "ISC",
-  "repository": "https://github.com/nkemjikanma/t-ens",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkemjikanma/t-ens"
+  },
   "homepage": "https://github.com/nkemjikanma/t-ens#readme",
   "source": "https://github.com/nkemjikanma/t-ens",
   "project_url": {
