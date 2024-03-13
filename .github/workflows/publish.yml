@@ -22,8 +22,7 @@ jobs:
         run: npm ci
 
       - name: publish
-        run: |
-          npx semantic-release
-          npm publish --access public
+        run: npx semantic-release
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+          GITHUB_TOKEN: ${{secretS.GITHUB_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
