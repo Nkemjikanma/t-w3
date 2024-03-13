@@ -10,9 +10,15 @@
     "link-cli": "(npm unlink t-ens || true) && chmod +x ./dist/index.js && npm link .",
     "dev": "tsx ./src/index.ts",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
   },
-  "keywords": ["cli", "ens", "ethereum", "terminal"],
+  "keywords": [
+    "cli",
+    "ens",
+    "ethereum",
+    "terminal"
+  ],
   "author": "Nkemjikanma",
   "license": "ISC",
   "repository": "https://github.com/nkemjikanma/t-ens",
@@ -32,9 +38,15 @@
     "viem": "^1.21.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/clear": "^0.1.4",
     "@types/figlet": "^1.5.8",
     "@types/node": "^20.11.23",
+    "husky": "^9.0.11",
+    "semantic-release": "^23.0.2",
     "tsx": "^4.7.1"
   }
 }
