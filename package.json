@@ -1,6 +1,6 @@
 {
   "name": "@nkemjikanma/t-ens",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Terminal ENS",
   "bin": {
     "t-ens": "./dist/index.js"
@@ -14,7 +14,12 @@
     "prepare": "husky",
     "semantic-release": "semantic-release --branches main"
   },
-  "keywords": ["cli", "ens", "ethereum", "terminal"],
+  "keywords": [
+    "cli",
+    "ens",
+    "ethereum",
+    "terminal"
+  ],
   "author": "Nkemjikanma",
   "license": "ISC",
   "repository": {
