@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/nkemjikanma/t-ens/compare/v1.0.0...v1.1.0) (2024-03-14)
+
+
+### Features
+
+* enable address resolutions ([925a4f1](https://github.com/nkemjikanma/t-ens/commit/925a4f14f90989e2e495049d4e96d831a5bc5864))
+
 # 1.0.0 (2024-03-13)
 
 
