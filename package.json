@@ -12,7 +12,9 @@
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "semantic-release": "semantic-release --branches main"
+    "semantic-release": "semantic-release --branches main",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "keywords": [
     "cli",
@@ -50,6 +52,9 @@
     "@types/clear": "^0.1.4",
     "@types/figlet": "^1.5.8",
     "@types/node": "^20.11.23",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.57.0",
     "husky": "^9.0.11",
     "semantic-release": "^23.0.2",
     "tsx": "^4.7.1"
