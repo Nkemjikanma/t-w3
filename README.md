@@ -1,14 +1,10 @@
 ## T-ENS
 
----
-
 > A vary simple CLI tool that serves as an entry way to Web3 and ENS right from your terminal
 
 ## Installation
 
----
-
-`npm install --global @nkemjikanma/t-ens`
+`$ npm install --global @nkemjikanma/t-ens`
 
 ## Usage
 
