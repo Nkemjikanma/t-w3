@@ -10,6 +10,7 @@ import {
     transactions,
 } from "./utils/eth.js";
 import { isAddress } from "viem";
+import { oraPromise } from "ora";
 
 program
     .version("0.0.1")
@@ -26,15 +27,23 @@ program
 program.parse(process.argv);
 const options = program.opts();
 
+// TODO: handle ora promise - success and failure
+
 if (options.resolve) {
     if (isAddress(options.resolve)) {
-        getEnsDomainName(options.resolve);
+        await oraPromise(getEnsDomainName(options.resolve), "Resolving ENS");
     } else {
-        getWalletAddress(options.resolve);
+        await oraPromise(
+            getWalletAddress(options.resolve),
+            "Resolving Address",
+        );
     }
 }
 if (options.transactions) {
-    await transactions(options.transactions);
+    await oraPromise(
+        transactions(options.transactions),
+        "Fetching Transactions",
+    );
 }
 
 if (!process.argv.slice(2).length) {

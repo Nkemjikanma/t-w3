@@ -1,7 +1,7 @@
 {
-  "name": "@nkemjikanma/t-ens",
+  "name": "t-w3",
   "version": "1.1.0",
-  "description": "Terminal ENS",
+  "description": "WEB3 in the terminal",
   "bin": {
     "t-ens": "./dist/index.js"
   },
@@ -16,30 +16,29 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix"
   },
-  "keywords": [
-    "cli",
-    "ens",
-    "ethereum",
-    "terminal"
-  ],
+  "keywords": ["cli", "ens", "ethereum", "terminal", "web3"],
   "author": "Nkemjikanma",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nkemjikanma/t-ens"
+    "url": "https://github.com/nkemjikanma/t-w3"
   },
-  "homepage": "https://github.com/nkemjikanma/t-ens#readme",
-  "source": "https://github.com/nkemjikanma/t-ens",
+  "homepage": "https://github.com/nkemjikanma/t-w3#readme",
+  "source": "https://github.com/nkemjikanma/t-w3",
   "project_url": {
-    "homepage": "https://github.com/nkemjikanma/t-ens#readme",
-    "source": "https://github.com/nkemjikanma/t-ens"
+    "homepage": "https://github.com/nkemjikanma/t-w3#readme",
+    "source": "https://github.com/nkemjikanma/t-w3"
   },
   "dependencies": {
+    "@covalenthq/client-sdk": "^0.9.6",
+    "@covalenthq/client-viem-sdk": "^0.0.5",
     "@nkemjikanma/t-ens": "^1.1.0",
     "chalk": "^5.3.0",
     "clear": "^0.1.0",
     "commander": "^12.0.0",
+    "dotenv": "^16.4.5",
     "figlet": "^1.7.0",
+    "ora": "^8.0.1",
     "typescript": "^5.4.2",
     "viem": "^2.8.6",
     "zod": "^3.22.4"
