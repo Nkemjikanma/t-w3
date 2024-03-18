@@ -16,18 +16,18 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix"
   },
-  "keywords": ["cli", "ens", "ethereum", "terminal"],
+  "keywords": ["cli", "ens", "ethereum", "terminal", "web3"],
   "author": "Nkemjikanma",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nkemjikanma/t-ens"
+    "url": "https://github.com/nkemjikanma/t-w3"
   },
-  "homepage": "https://github.com/nkemjikanma/t-ens#readme",
-  "source": "https://github.com/nkemjikanma/t-ens",
+  "homepage": "https://github.com/nkemjikanma/t-w3#readme",
+  "source": "https://github.com/nkemjikanma/t-w3",
   "project_url": {
-    "homepage": "https://github.com/nkemjikanma/t-ens#readme",
-    "source": "https://github.com/nkemjikanma/t-ens"
+    "homepage": "https://github.com/nkemjikanma/t-w3#readme",
+    "source": "https://github.com/nkemjikanma/t-w3"
   },
   "dependencies": {
     "@covalenthq/client-sdk": "^0.9.6",
