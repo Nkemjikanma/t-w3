@@ -1,6 +1,6 @@
-## T-ENS
+## T-W3
 
-> A vary simple CLI tool that serves as an entry way to Web3 and ENS right from your terminal
+> A vary simple CLI tool that serves as an entry way to Web3 right from your terminal
 
 ## Installation
 
