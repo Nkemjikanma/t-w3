@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/nkemjikanma/t-w3/compare/v1.1.0...v1.2.0) (2024-03-18)
+
+
+### Features
+
+* add orb, covalent and dotenv ([a1b07a0](https://github.com/nkemjikanma/t-w3/commit/a1b07a0429a1540fe5c888d8d8adedc0c2702139))
+* add the ora loader ([10fcaa4](https://github.com/nkemjikanma/t-w3/commit/10fcaa49176c5e5ca6a32a7bdf8388a602c798f8))
+
 # [1.1.0](https://github.com/nkemjikanma/t-ens/compare/v1.0.0...v1.1.0) (2024-03-14)
 
 
