@@ -4,17 +4,21 @@
 
 ## Installation
 
-`$ npm install --global @nkemjikanma/t-ens`
+`$ npm install --global @nkemjikanma/t-w3`
 
 ## Usage
 
 ###### list all available commands
 
-`$ t-ens` or `$ t-ens --help`
+`$ t-w3` or `$ t-w3 --help`
 
 ###### resolve an ENS name or wallet address
 
-`$ t-ens --resolve <ens-name | wallet address>`
+`$ t-w3 --resolve <ens-name | wallet address>`
+
+###### get transactions for a wallet address
+
+`$ t-w3 --transactions <wallet address | ens-name>`
 
 > [!IMPORTANT]
 > WORK IS STILL IN PROGRESS. BREAKING CHANGES MAY OCCUR
