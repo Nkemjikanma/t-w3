@@ -69,6 +69,10 @@ export async function transactions(walletAddress: string) {
     const [balance, addressActivity] = await Promise.all([
         getBalance(client, { address: hex && hex }),
         await client.BaseService.getAddressActivity("demo.eth"),
+        await client.BalanceService.getTokenBalancesForWalletAddress(
+            "eth-mainnet",
+            hex,
+        ),
     ]);
 
     console.log(balance, addressActivity);
@@ -76,3 +80,5 @@ export async function transactions(walletAddress: string) {
     // TODO: get more information about the wallet address
     // TODO: Render the information in an appealing way to the user - table?
 }
+
+export async function getWalletBalance() {}
