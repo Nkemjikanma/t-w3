@@ -12,8 +12,6 @@ const client = createClient({
     transport: http(process.env.ALCHEMY_HTTPS),
 }).extend(publicActionCovalent(process.env.COVALENT_API_KEY));
 
-console.log(process.env.COVALENT_API_KEY);
-
 export async function getWalletAddress(address: string) {
     // check if complete address is provided
 
@@ -31,6 +29,7 @@ export async function getWalletAddress(address: string) {
     }
 
     const table = new createTable(ethAddress);
+    console.log("");
     console.table(table);
     return ethAddress;
 }
@@ -44,6 +43,7 @@ export async function getEnsDomainName(address: string) {
     const ensName = await getEnsName(client, { address });
 
     const table = new createTable(String(ensName));
+    console.log("");
     console.table(table);
 }
 
@@ -68,7 +68,7 @@ export async function transactions(walletAddress: string) {
 
     const [balance, addressActivity] = await Promise.all([
         getBalance(client, { address: hex && hex }),
-        await client.BaseService.getAddressActivity("demo.eth"),
+        await client.BaseService.getAddressActivity(hex),
         await client.BalanceService.getTokenBalancesForWalletAddress(
             "eth-mainnet",
             hex,

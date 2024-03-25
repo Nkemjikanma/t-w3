@@ -19,7 +19,7 @@ program
         "-r, --resolve <value>",
         "resolve Address from ENS name or ENS name from address",
     )
-    .option("-s, --search <value>", "resolve ENS name from address")
+    // .option("-s, --search <value>", "resolve ENS name from address")
     .option("-t, --transactions <value>", "get all wallet transactions")
     .option("-h, --help", "display help for command");
 
@@ -30,13 +30,19 @@ const options = program.opts();
 // TODO: handle ora promise - success and failure
 
 if (options.resolve) {
+    console.log(options.resolve);
     if (isAddress(options.resolve)) {
-        await oraPromise(getEnsDomainName(options.resolve), "Resolving ENS");
+        await oraPromise(getEnsDomainName(options.resolve), {
+            text: "Resolving ENS address",
+            successText: "ENS address resolved",
+            failText: "ENS address not found",
+        });
     } else {
-        await oraPromise(
-            getWalletAddress(options.resolve),
-            "Resolving Address",
-        );
+        await oraPromise(getWalletAddress(options.resolve), {
+            text: "Resolving Address",
+            successText: "Address Resolved",
+            failText: "Address Not Found",
+        });
     }
 }
 if (options.transactions) {
