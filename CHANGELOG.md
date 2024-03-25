@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/nkemjikanma/t-w3/compare/v1.2.0...v1.3.0) (2024-03-25)
+
+
+### Bug Fixes
+
+* fix orb display on resolve commands ([371757e](https://github.com/nkemjikanma/t-w3/commit/371757e584daaf4b12f4ae9d950e184909e4f943))
+
+
+### Features
+
+* add more functions ([e4e36eb](https://github.com/nkemjikanma/t-w3/commit/e4e36eb28f073b11cde5e6f402a134312f56d89e))
+
 # [1.2.0](https://github.com/nkemjikanma/t-w3/compare/v1.1.0...v1.2.0) (2024-03-18)
 
 
