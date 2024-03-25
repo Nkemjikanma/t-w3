@@ -7,6 +7,8 @@ import { program } from "commander";
 import {
     getEnsDomainName,
     getWalletAddress,
+    getWalletBalances,
+    getWalletBalance,
     transactions,
 } from "./utils/eth.js";
 import { isAddress } from "viem";
@@ -19,37 +21,41 @@ program
         "-r, --resolve <value>",
         "resolve Address from ENS name or ENS name from address",
     )
-    // .option("-s, --search <value>", "resolve ENS name from address")
-    .option("-t, --transactions <value>", "get all wallet transactions")
+    .option("-w, --wallet <value>", "Get content of wallet address")
+    .option("-b, --balance <value>", "Get balance of wallet address")
+    .option("-s, --summary <value>", "get wallet transactions summary")
     .option("-h, --help", "display help for command");
 
-// program.parse(process.argv);
 program.parse(process.argv);
 const options = program.opts();
-
-// TODO: handle ora promise - success and failure
 
 if (options.resolve) {
     console.log(options.resolve);
     if (isAddress(options.resolve)) {
         await oraPromise(getEnsDomainName(options.resolve), {
             text: "Resolving ENS address",
-            successText: "ENS address resolved",
-            failText: "ENS address not found",
+            successText: "ENS address output: ",
+            failText: "ENS address not found", // TODO: handle this - how can I get this error on fail invalid address?
         });
     } else {
         await oraPromise(getWalletAddress(options.resolve), {
             text: "Resolving Address",
-            successText: "Address Resolved",
+            successText: "Address output:",
             failText: "Address Not Found",
         });
     }
 }
-if (options.transactions) {
-    await oraPromise(
-        transactions(options.transactions),
-        "Fetching Transactions",
-    );
+
+if (options.wallet) {
+    await getWalletBalances(options.wallet);
+}
+
+if (options.balance) {
+    await getWalletBalance(options.balance);
+}
+
+if (options.summary) {
+    await transactions(options.summary);
 }
 
 if (!process.argv.slice(2).length) {
