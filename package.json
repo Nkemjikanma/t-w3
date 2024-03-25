@@ -8,7 +8,6 @@
   "type": "module",
   "scripts": {
     "link-cli": "(npm unlink t-ens || true) && chmod +x ./dist/index.js && npm link .",
-    "dev": "tsx ./src/index.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
@@ -16,13 +15,7 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix"
   },
-  "keywords": [
-    "cli",
-    "ens",
-    "ethereum",
-    "terminal",
-    "web3"
-  ],
+  "keywords": ["cli", "ens", "ethereum", "terminal", "web3"],
   "author": "Nkemjikanma",
   "license": "ISC",
   "repository": {
