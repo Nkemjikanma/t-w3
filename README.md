@@ -4,7 +4,7 @@
 
 ## Installation
 
-`$ npm install --global @nkemjikanma/t-w3`
+`$ npm install --global t-w3`
 
 ## Usage
 
