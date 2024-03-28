@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/nkemjikanma/t-w3/compare/v1.3.0...v1.4.0) (2024-03-28)
+
+
+### Features
+
+* add functions for nfts, pools and token approvals ([548bfd2](https://github.com/nkemjikanma/t-w3/commit/548bfd2ba1e0895e49cf10193d8f8946002dfab0))
+
 # [1.3.0](https://github.com/nkemjikanma/t-w3/compare/v1.2.0...v1.3.0) (2024-03-25)
 
 
