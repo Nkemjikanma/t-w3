@@ -159,20 +159,33 @@ export async function transactions(walletAddress: string) {
     const spinner = ora("Fetching transactions\n").start();
 
     try {
-        const addressActivity =
-            await client.BaseService.getAddressActivity(walletAddress);
+        const addressActivity = async () => {
+            const addressActivities = [];
+            for await (const resp of client.TransactionService.getAllTransactionsForAddress(
+                "eth-mainnet",
+                walletAddress,
+            )) {
+                addressActivities.push(resp);
+            }
 
-        const addressActivities = addressActivity.data.items;
+            return addressActivities;
+        };
+        const activities = await addressActivity();
+
+        // console.log(activities);
 
         console.table(
-            addressActivities.map((activity) => {
+            activities.map((activity) => {
                 return {
-                    Chain: activity.category_label ?? "-",
-                    label: activity.label ?? "-",
+                    "Tx Hash": activity.tx_hash ?? "-",
+                    From: activity.from_address_label ?? activity.from_address,
+                    To: activity.to_address_label ?? activity.to_address,
+                    Value: activity.pretty_value_quote ?? "-",
+                    "Tx fee": activity.pretty_gas_quote ?? "-",
                 };
             }),
         );
-        spinner.succeed("Transactions fetched");
+        spinner.succeed("\nTransactions fetched");
     } catch (error) {
         spinner.fail("Failed to fetch transactions");
     }
