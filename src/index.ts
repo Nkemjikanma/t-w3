@@ -10,6 +10,9 @@ import {
     getWalletBalances,
     getWalletBalance,
     transactions,
+    getWalletNft,
+    getWalletInPools,
+    getWalletTokenApprovals,
 } from "./utils/eth.js";
 import { isAddress } from "viem";
 import { oraPromise } from "ora";
@@ -24,6 +27,9 @@ program
     .option("-w, --wallet <value>", "Get content of wallet address")
     .option("-b, --balance <value>", "Get balance of wallet address")
     .option("-s, --summary <value>", "get wallet transactions summary")
+    .option("-n, --nft <value>", "get wallet nft summary")
+    .option("-p, --pools <value>", "get wallet pools summary")
+    .option("-a, --approvals <value>", "get wallet token approvals")
     .option("-h, --help", "display help for command");
 
 program.parse(process.argv);
@@ -58,6 +64,17 @@ if (options.summary) {
     await transactions(options.summary);
 }
 
+if (options.nft) {
+    await getWalletNft(options.nft);
+}
+
+if (options.pools) {
+    await getWalletInPools(options.pools);
+}
+
+if (options.approvals) {
+    await getWalletTokenApprovals(options.tokkenApprovals);
+}
 if (!process.argv.slice(2).length) {
     clear();
     console.log(
