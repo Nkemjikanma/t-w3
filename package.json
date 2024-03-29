@@ -1,6 +1,6 @@
 {
   "name": "t-w3",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "WEB3 in the terminal",
   "bin": {
     "t-ens": "./dist/index.js"

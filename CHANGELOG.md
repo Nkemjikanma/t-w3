@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/nkemjikanma/t-w3/compare/v1.4.0...v1.4.1) (2024-03-29)
+
+
+### Bug Fixes
+
+* use transactions endpoint for account summary ([9961bfb](https://github.com/nkemjikanma/t-w3/commit/9961bfb959521625a0fc9779f33b6911d5cb9def))
+
 # [1.4.0](https://github.com/nkemjikanma/t-w3/compare/v1.3.0...v1.4.0) (2024-03-28)
 
 
